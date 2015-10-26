@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var url = 'www.cricbuzz.com';
 
-var options = {
+var options = {					// this is the options for the request function;
 	host: url,
 	method:"GET"
 }
@@ -15,7 +15,7 @@ var onResponse = function(res){
 	});
 	res.on('end',function(){
 		console.log(data)
-		fs.writeFileSync("cricbuzz.html",data);
+		fs.writeFileSync("cricbuzz.html",data); 		// writing the data into file;
 	});
 };
 
@@ -24,6 +24,9 @@ var onErr = function(err){
 }
 
 http.request(options,onResponse).on("error",onErr).end();
+
+
+
 
 //-------------------------------------------------------------------------------
 
