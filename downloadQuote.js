@@ -1,4 +1,4 @@
-//--------- download the http request----------------------
+//--------- download the http request-------------------
 
 var http = require('http');
 var fs = require('fs');
